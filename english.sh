@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -x
+set -x
 #set -e
 IFS=$'\n\t'
 clear
@@ -102,6 +102,9 @@ read -p "Position de la 1ere ligne: " debut
 read -p "Position de la dernière ligne: " fin
 export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
 echo -e "\033[37m\n Score à ${succes} \n Lets GO"
+b=$((${fin} - ${debut} +1))
+echo ${b}
+
 }
 
 function param
@@ -226,6 +229,44 @@ rappel_menu;;
 4) echo "Quizz Aléatoire"
 choix
 interval
+RandomQuizz=$(rand -u -M ${b} -N ${b})
+echo ${RandomQuizz}
+#z=10
+#m=20
+#until [ $z = 0 ]; do   echo "z: $z";   ((z=z-1)); done
+
+
+
+
+#until [ $b = 1 ]; do
+# 	c=$(echo ${RandomQuizz} |cut -d" " -f1)
+#	echo ${c}
+#	RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
+#	echo ${RandomQuizz}
+#
+#	((b=b-1))
+#done
+
+
+#export lignequizzRandom=$(echo ${quizz} |awk NR==${c})
+#export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
+
+#export j=$(cat result1.txt |awk  NR==3 )
+#for ligne2 in ${quizz}; do
+#	echo -e "test"
+#done
+#export lignequizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
+#echo ${lignequizzRandom}
+#for ligne in ${lignequizzRandom}; do
+#        echo -e "\t\t\t\tMot à traduire:"
+#	export lignequizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
+        #echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
+#        echo -e "=====>      ${lignequizzRandom}"
+#        echo "===================================================================================="
+#done
+
+#export quizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
+#echo ${quizzRandom}
 random_quizz
 
 rappel_menu;;
