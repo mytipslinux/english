@@ -25,11 +25,20 @@ i=""
 function rappel_menu
 {
 echo "Un autre Quizz ?
-Choix 1: -English
-Choix 2: -French
+Choix 1: -Anglais/Francais
+Choix 2: -Francais/Anglais
 choix 3: -Relancer le dernier Quizz
-Choix 4: -Voir votre historique
-Choix 5: -Quitter (q|Q)"
+Choix 4: -Quizz Aléatoire
+Choix 5: -Voir votre historique
+Choix 6: -Quitter (q|Q)"
+}
+
+function rappel_menu_random
+{
+echo "Un autre Quizz Random ?
+Choix 1: -Anglais/francais
+Choix 2: -Francais/Anglais
+choix 3: -Quitter (q|Q)"
 }
 
 function choix
@@ -48,7 +57,7 @@ select i in "Seulement les erreurs du fichier" "Tous les mots du fichier"; do
 done
 }
 
-function quizz_eng
+function QuizzEng
 {
 for ligne in ${quizz}; do
         echo -e "\033[33m===================================================================================="
@@ -71,7 +80,7 @@ done
 affichage_score |tail -n 9
 }
 
-function quizz_fr
+function QuizzFr
 {
 for ligne in ${quizz}; do
         echo -e "\033[33m===================================================================================="
@@ -94,6 +103,77 @@ done
 affichage_score |tail -n 9
 }
 
+function randomQuizzEng
+{
+RandomQuizz=$(rand -u -M ${b} -N ${b})
+echo ${RandomQuizz}
+echo ${quizz} |sed "s+@ +@\n+g" > aftersed
+FILE=aftersed
+cat $FILE
+until [ $b == 0 ]; do
+       down=$(echo ${RandomQuizz} |cut -d" " -f1)
+       ((down=down+1))
+       echo "La ligne random est la ligne ${down}:"
+       export lignerandom=$(cat $FILE |awk  NR==${down})
+       RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
+       while [ -z ${trad} ]; do
+                echo -e "\033[33m===================================================================================="
+                echo -e "\t\t\t\tMot à traduire:"
+                export mot1=$(echo ${lignerandom} |cut -d "#" -f1)
+                echo -e "=====>      ${mot1}"
+                echo "===================================================================================="
+
+                echo -e "\033[37m\n "
+                        read -p "Quelle est la traduction: " trad
+                echo -e "\033[32m===================================================================================="
+                echo -e "\t\t\t\tLa bonne traduction:"
+                export mot2=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
+                check_response
+        score > result1.txt
+        done
+        ((b=b-1))
+        trad=""
+        echo "Passons au mot suivant:"
+done
+affichage_score |tail -n 9
+}
+
+
+function randomQuizzFr
+{
+RandomQuizz=$(rand -u -M ${b} -N ${b})
+echo ${RandomQuizz}
+echo ${quizz} |sed "s+@ +@\n+g" > aftersed
+FILE=aftersed
+cat $FILE
+until [ $b == 0 ]; do
+       down=$(echo ${RandomQuizz} |cut -d" " -f1)
+       ((down=down+1))
+       echo "La ligne random est la ligne ${down}:"
+       export lignerandom=$(cat $FILE |awk  NR==${down})
+       RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
+       while [ -z ${trad} ]; do
+                echo -e "\033[33m===================================================================================="
+                echo -e "\t\t\t\tMot à traduire:"
+                export mot1=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
+                echo -e "=====>      ${mot1}"
+                echo "===================================================================================="
+
+                echo -e "\033[37m\n "
+                        read -p "Quelle est la traduction: " trad
+                echo -e "\033[32m===================================================================================="
+                echo -e "\t\t\t\tLa bonne traduction:"
+                export mot2=$(echo ${lignerandom} |cut -d "#" -f1 |cut -d "@" -f1)
+        	check_response
+	score > result1.txt
+	done
+	((b=b-1))
+        trad=""
+        echo "Passons au mot suivant:"
+done
+affichage_score |tail -n 9
+}
+
 function interval
 {
 export nbr=$(wc -l ${fichier} |cut -d " " -f1)
@@ -104,7 +184,6 @@ export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
 echo -e "\033[37m\n Score à ${succes} \n Lets GO"
 b=$((${fin} - ${debut} +1))
 echo ${b}
-
 }
 
 function param
@@ -159,27 +238,6 @@ succes=""
 total=""
 }
 
-function random_quizz
-{
-
-echo ${quizz} |sed "s+@ +@\n+g" > aftersed
-export nbr1=$(wc -l aftersed |cut -d" " -f1)
-FILE=aftersed
-cat $FILE
-# get a random number between 1 and $lc
-rnd=$RANDOM
-let "rnd %= $nbr1"
-((rnd++))
-# traverse file and find line number $rnd
-k=0
-while read -r line; do
- ((k++))
- [ $k -eq $rnd ] && break
-done < $FILE
-# output random line
-printf '%s\n' "$line"
-}
-
 #  CODE
 # ======================================
 PS3="> selectionnez une action : "
@@ -204,7 +262,7 @@ case ${REPLY} in
 j=$((j+1)) #> param.txt
 choix
 interval
-quizz_eng
+QuizzEng
 blank_var
 j=""
 rappel_menu;;
@@ -213,7 +271,7 @@ rappel_menu;;
 j=$((h+2)) #> param.txt
 choix
 interval
-quizz_fr
+QuizzFr
 blank_var
 j=""
 rappel_menu;;
@@ -226,49 +284,24 @@ fi
 blank_var
 rappel_menu;;
 
-4) echo "Quizz Aléatoire"
-choix
-interval
-RandomQuizz=$(rand -u -M ${b} -N ${b})
-echo ${RandomQuizz}
-#z=10
-#m=20
-#until [ $z = 0 ]; do   echo "z: $z";   ((z=z-1)); done
-
-
-
-
-#until [ $b = 1 ]; do
-# 	c=$(echo ${RandomQuizz} |cut -d" " -f1)
-#	echo ${c}
-#	RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
-#	echo ${RandomQuizz}
-#
-#	((b=b-1))
-#done
-
-
-#export lignequizzRandom=$(echo ${quizz} |awk NR==${c})
-#export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
-
-#export j=$(cat result1.txt |awk  NR==3 )
-#for ligne2 in ${quizz}; do
-#	echo -e "test"
-#done
-#export lignequizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
-#echo ${lignequizzRandom}
-#for ligne in ${lignequizzRandom}; do
-#        echo -e "\t\t\t\tMot à traduire:"
-#	export lignequizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
-        #echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
-#        echo -e "=====>      ${lignequizzRandom}"
-#        echo "===================================================================================="
-#done
-
-#export quizzRandom=$(cat ${testfichier} |awk "NR=${RandomQuizz}")
-#echo ${quizzRandom}
-random_quizz
-
+4) echo "Quizz Aléatoire:"
+select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Quitter (q|Q)"; do #menu
+case ${REPLY} in
+	1) echo "Aléatoire Anglais/Francais:"
+	choix
+	interval
+	randomQuizzEng
+	
+	rappel_menu_random;;
+	2)echo "Aléatoire Francais/Anglais:"
+	choix
+	interval
+	randomQuizzFr
+	
+	rappel_menu_random;;
+	3|q|Q) exit;;
+esac
+done
 rappel_menu;;
 5) echo "Historique des résultats"
 
