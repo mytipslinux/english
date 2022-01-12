@@ -125,7 +125,9 @@ until [ $b == 0 ]; do
                 echo "===================================================================================="
 
                 echo -e "\033[37m\n "
+		while [ -z ${trad} ]; do	
                         read -p "Quelle est la traduction: " trad
+		done
                 echo -e "\033[32m===================================================================================="
                 echo -e "\t\t\t\tLa bonne traduction:"
                 export mot2=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
@@ -158,7 +160,9 @@ until [ $b == 0 ]; do
                 echo "===================================================================================="
 
                 echo -e "\033[37m\n "
+                while [ -z ${trad} ]; do
                         read -p "Quelle est la traduction: " trad
+                done
                 echo -e "\033[32m===================================================================================="
                 echo -e "\t\t\t\tLa bonne traduction:"
                 export mot2=$(echo ${lignerandom} |cut -d "#" -f1 |cut -d "@" -f1)
