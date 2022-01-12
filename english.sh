@@ -60,6 +60,7 @@ done
 function QuizzEng
 {
 for ligne in ${quizz}; do
+	echo "Passons au mot suivant:"
         echo -e "\033[33m===================================================================================="
         echo -e "\t\t\t\tMot à traduire:"
         export mot1=$(echo ${ligne} |cut -d "#" -f1)
@@ -83,6 +84,7 @@ affichage_score |tail -n 9
 function QuizzFr
 {
 for ligne in ${quizz}; do
+	echo "Passons au mot suivant:"
         echo -e "\033[33m===================================================================================="
         echo -e "\t\t\t\tMot à traduire:"
         export mot1=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
@@ -115,6 +117,7 @@ until [ $b == 0 ]; do
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
+		echo "Passons au mot suivant:"
                 echo -e "\033[33m===================================================================================="
                 echo -e "\t\t\t\tMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f1)
@@ -131,7 +134,6 @@ until [ $b == 0 ]; do
         done
         ((b=b-1))
         trad=""
-        echo "Passons au mot suivant:"
 done
 affichage_score |tail -n 9
 }
@@ -148,6 +150,7 @@ until [ $b == 0 ]; do
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
+		echo "Passons au mot suivant:"
                 echo -e "\033[33m===================================================================================="
                 echo -e "\t\t\t\tMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
@@ -164,7 +167,6 @@ until [ $b == 0 ]; do
 	done
 	((b=b-1))
         trad=""
-        echo "Passons au mot suivant:"
 done
 affichage_score |tail -n 9
 }
