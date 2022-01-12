@@ -106,14 +106,14 @@ affichage_score |tail -n 9
 function randomQuizzEng
 {
 RandomQuizz=$(rand -u -M ${b} -N ${b})
-echo ${RandomQuizz}
+#echo ${RandomQuizz}
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
-cat $FILE
+#cat $FILE
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
        ((down=down+1))
-       echo "La ligne random est la ligne ${down}:"
+       echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
@@ -142,14 +142,14 @@ affichage_score |tail -n 9
 function randomQuizzFr
 {
 RandomQuizz=$(rand -u -M ${b} -N ${b})
-echo ${RandomQuizz}
+#echo ${RandomQuizz}
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
-cat $FILE
+#cat $FILE
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
        ((down=down+1))
-       echo "La ligne random est la ligne ${down}:"
+       echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
@@ -181,9 +181,8 @@ echo -e "\033[37m\nSelectionnez l'interval de ligne à tester entre les: ${nbr} 
 read -p "Position de la 1ere ligne: " debut
 read -p "Position de la dernière ligne: " fin
 export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
-echo -e "\033[37m\n Score à ${succes} \n Lets GO"
+echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
 b=$((${fin} - ${debut} +1))
-echo ${b}
 }
 
 function param
@@ -197,7 +196,7 @@ echo "Lancement du Quizz avec les derniers parametres:
 Choix: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}"
 
 export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
-echo -e "\033[37m\n Score à ${succes} \n Lets GO"
+echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
 }
 
 function check_response
@@ -291,12 +290,14 @@ case ${REPLY} in
 	choix
 	interval
 	randomQuizzEng
+	blank_var
 	
 	rappel_menu_random;;
 	2)echo "Aléatoire Francais/Anglais:"
 	choix
 	interval
 	randomQuizzFr
+	blank_var
 	
 	rappel_menu_random;;
 	3|q|Q) exit;;
