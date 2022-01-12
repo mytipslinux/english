@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+#set -x
 #set -e
 IFS=$'\n\t'
 clear
@@ -106,10 +106,8 @@ affichage_score |tail -n 9
 function randomQuizzEng
 {
 RandomQuizz=$(rand -u -M ${b} -N ${b})
-#echo ${RandomQuizz}
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
-#cat $FILE
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
        ((down=down+1))
@@ -138,14 +136,11 @@ done
 affichage_score |tail -n 9
 }
 
-
 function randomQuizzFr
 {
 RandomQuizz=$(rand -u -M ${b} -N ${b})
-#echo ${RandomQuizz}
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
-#cat $FILE
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
        ((down=down+1))
@@ -254,11 +249,12 @@ echo -e "c=====================
       |/ //:|  |:\ \\:|
       | //::|  |::\ \|
       |//:::|__|:::\_|\n\n"
-select choix in "Quizz in English" "Quizz in French" "Relancer le dernier Quizz" "Quizz aléatoire" "Voir votre historique" "Quitter (q|Q)"; do #menu
+
+select choix in "Quizz in English" "Quizz in French" "Relancer le dernier Quizz" "Quizz aléatoire" "Voir votre historique" "Quitter (q|Q)"; do
 case ${REPLY} in
 
 1) echo "Quizz in English:"
-j=$((j+1)) #> param.txt
+j=$((j+1))
 choix
 interval
 QuizzEng
@@ -267,7 +263,7 @@ j=""
 rappel_menu;;
 
 2) echo "Quizz in French:"
-j=$((h+2)) #> param.txt
+j=$((h+2))
 choix
 interval
 QuizzFr
@@ -284,33 +280,32 @@ blank_var
 rappel_menu;;
 
 4) echo "Quizz Aléatoire:"
-select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Quitter (q|Q)"; do #menu
+select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Quitter (q|Q)"; do
 case ${REPLY} in
+
 	1) echo "Aléatoire Anglais/Francais:"
 	choix
 	interval
 	randomQuizzEng
 	blank_var
-	
 	rappel_menu_random;;
+
 	2)echo "Aléatoire Francais/Anglais:"
 	choix
 	interval
 	randomQuizzFr
 	blank_var
-	
 	rappel_menu_random;;
+
 	3|q|Q) exit;;
 esac
 done
 rappel_menu;;
+
 5) echo "Historique des résultats"
-
 cat result.txt
-
 rappel_menu;;
 
 6|q|Q) exit;;
-
 esac
 done
