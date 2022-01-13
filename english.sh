@@ -146,7 +146,7 @@ c=1
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
-       down=$(echo ${RandomQuizz} |cut -d" " -f{c})
+       down=$(echo ${RandomQuizz} |cut -d" " -f${c})
        ((c=c+1))
        echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
