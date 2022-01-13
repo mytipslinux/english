@@ -108,19 +108,15 @@ affichage_score |tail -n 9
 function randomQuizzEng
 {
 RandomQuizz=$(shuf -i 1-${b})
-echo ${b}
-echo ${RandomQuizz}
-#RandomQuizz=$(rand -u -M ${b} -N ${b})
+c=1
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
-       down=$(echo ${RandomQuizz} |cut -d" " -f1)
-#       ((down=down+1))
+       down=$(echo ${RandomQuizz} |cut -d" " -f${c})
+       ((c=c+1))
        echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
-       RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
-		echo "Passons au mot suivant:"
                 echo -e "\033[33m===================================================================================="
                 echo -e "\t\t\t\tMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f1)
@@ -146,17 +142,15 @@ affichage_score |tail -n 9
 function randomQuizzFr
 {
 RandomQuizz=$(shuf -i 1-${b})
-#RandomQuizz=$(rand -u -M ${b} -N ${b})
+c=1
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
-       down=$(echo ${RandomQuizz} |cut -d" " -f1)
-#       ((down=down+1))
+       down=$(echo ${RandomQuizz} |cut -d" " -f{c})
+       ((c=c+1))
        echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
-       RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
        while [ -z ${trad} ]; do
-		echo "Passons au mot suivant:"
                 echo -e "\033[33m===================================================================================="
                 echo -e "\t\t\t\tMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
