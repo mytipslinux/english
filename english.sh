@@ -107,13 +107,15 @@ affichage_score |tail -n 9
 
 function randomQuizzEng
 {
-RandomQuizz=$(shuf -i ${b})
+RandomQuizz=$(shuf -i 1-${b})
+echo ${b}
+echo ${RandomQuizz}
 #RandomQuizz=$(rand -u -M ${b} -N ${b})
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
-       ((down=down+1))
+#       ((down=down+1))
        echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
@@ -143,13 +145,13 @@ affichage_score |tail -n 9
 
 function randomQuizzFr
 {
-RandomQuizz=$(shuf -i ${b})
+RandomQuizz=$(shuf -i 1-${b})
 #RandomQuizz=$(rand -u -M ${b} -N ${b})
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f1)
-       ((down=down+1))
+#       ((down=down+1))
        echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        RandomQuizz=$(echo ${RandomQuizz} |cut -c 3-)
