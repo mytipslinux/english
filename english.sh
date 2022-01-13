@@ -107,7 +107,8 @@ affichage_score |tail -n 9
 
 function randomQuizzEng
 {
-RandomQuizz=$(rand -u -M ${b} -N ${b})
+RandomQuizz=$(shuf -i ${b})
+#RandomQuizz=$(rand -u -M ${b} -N ${b})
 echo ${quizz} |sed "s+@ +@\n+g" > aftersed
 FILE=aftersed
 until [ $b == 0 ]; do
