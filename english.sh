@@ -38,7 +38,8 @@ function rappel_menu_random
 echo "Un autre Quizz Random ?
 Choix 1: -Anglais/francais
 Choix 2: -Francais/Anglais
-choix 3: -Quitter (q|Q)"
+choix 3: -Relancer la même plage aléatoire
+choix 4: -Quitter (q|Q)"
 }
 
 function choix
@@ -105,7 +106,7 @@ done
 affichage_score |tail -n 9
 }
 
-function randomQuizzEng
+function RandomQuizzEng
 {
 RandomQuizz=$(shuf -i 1-${b})
 c=1
@@ -139,7 +140,7 @@ done
 affichage_score |tail -n 9
 }
 
-function randomQuizzFr
+function RandomQuizzFr
 {
 RandomQuizz=$(shuf -i 1-${b})
 c=1
@@ -277,31 +278,39 @@ rappel_menu;;
 
 3) param
 if [[ "${j}" == 1 ]]
-	then quizz_eng
-	else quizz_fr;
+	then QuizzEng
+	else QuizzFr;
 fi
 blank_var
 rappel_menu;;
 
 4) echo "Quizz Aléatoire:"
-select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Quitter (q|Q)"; do
+select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Relancer la même plage aléatoire" "Quitter (q|Q)"; do
 case ${REPLY} in
 
 	1) echo "Aléatoire Anglais/Francais:"
 	choix
 	interval
-	randomQuizzEng
+	RandomQuizzEng
 	blank_var
 	rappel_menu_random;;
 
-	2)echo "Aléatoire Francais/Anglais:"
+	2) echo "Aléatoire Francais/Anglais:"
 	choix
 	interval
-	randomQuizzFr
+	RandomQuizzFr
 	blank_var
 	rappel_menu_random;;
 
-	3|q|Q) exit;;
+	3) echo "Relancer la même plage aléatoire:"
+	param
+	if [[ "${j}" == 1 ]]
+	        then RandomQuizzEng
+        	else RandomQuizzFr;
+	fi
+	blank_var
+        rappel_menu_random;;
+	4|q|Q) exit;;
 esac
 done
 rappel_menu;;
