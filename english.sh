@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -x
+set -x
 #set -e
 IFS=$'\n\t'
 clear
@@ -192,6 +192,7 @@ export i=$(cat result1.txt |awk  NR==3 |cut -d ":" -f2 |cut -d")" -f2| cut -c 2-
 export fichier=$(cat result1.txt |awk  NR==3 |cut -d ":" -f3 | cut -d" " -f2)
 export debut=$(cat result1.txt |awk  NR==3 |cut -d ":" -f4 | cut -d" " -f2)
 export fin=$(cat result1.txt |awk  NR==3 |cut -d ":" -f5 | cut -d" " -f2)
+b=$((${fin} - ${debut} +1))
 echo "Lancement du Quizz avec les derniers parametres: 
 Choix: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}"
 
@@ -289,17 +290,21 @@ select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Rel
 case ${REPLY} in
 
 	1) echo "Aléatoire Anglais/Francais:"
+	j=$((j+1))
 	choix
 	interval
 	RandomQuizzEng
 	blank_var
+	j=""
 	rappel_menu_random;;
 
 	2) echo "Aléatoire Francais/Anglais:"
+	j=$((h+2))
 	choix
 	interval
 	RandomQuizzFr
 	blank_var
+	j=""
 	rappel_menu_random;;
 
 	3) echo "Relancer la même plage aléatoire:"
