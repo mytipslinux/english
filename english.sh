@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+#set -x
 #set -e
 IFS=$'\n\t'
 clear
@@ -203,12 +203,15 @@ echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
 function check_response
 {
 echo "=====>        ${mot2}"
+#	trans -t en+fr ${trad}
         if [[ "${mot2}" =~ "${trad}" ]]
                 then echo -e "=\tExact: Votre trad: ${trad} corresponds à: ${mot2} "
         echo -e "\033[32m===================================================================================="
                 succes=$((succes+1))
                 total=$((total+1))
         else echo -e "\t\033[31mRaté: Ca ne correponds pas entre: ${trad} et: ${mot2}"
+	echo -e "\t\033[31mAjouté à votre liste d'erreur"
+	echo "$ligne" >> onlyerr2
         echo -e "\033[32m===================================================================================="
                 total=$((total+1)) ;
         fi
