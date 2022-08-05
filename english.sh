@@ -115,21 +115,14 @@ FILE=aftersed
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f${c})
        ((c=c+1))
-       echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        while [ -z ${trad} ]; do
-                echo -e "\033[33m===================================================================================="
-                echo -e "\t\t\t\tMot à traduire:"
+                echo -e "\033[33mMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f1)
-                echo -e "=====>      ${mot1}"
-                echo "===================================================================================="
-
-                echo -e "\033[37m\n "
+                echo -e "\033[37m${mot1}"
 		while [ -z ${trad} ]; do	
-                        read -p "Quelle est la traduction: " trad
+                        read -p "> " trad
 		done
-                echo -e "\033[32m===================================================================================="
-                echo -e "\t\t\t\tLa bonne traduction:"
                 export mot2=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
                 check_response
         score > result1.txt
@@ -149,21 +142,14 @@ FILE=aftersed
 until [ $b == 0 ]; do
        down=$(echo ${RandomQuizz} |cut -d" " -f${c})
        ((c=c+1))
-       echo "La ligne Random est la ligne: ${down}"
        export lignerandom=$(cat $FILE |awk  NR==${down})
        while [ -z ${trad} ]; do
-                echo -e "\033[33m===================================================================================="
-                echo -e "\t\t\t\tMot à traduire:"
+                echo -e "\033[33mMot à traduire:"
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
-                echo -e "=====>      ${mot1}"
-                echo "===================================================================================="
-
-                echo -e "\033[37m\n "
+                echo -e "\033[37m${mot1}"
                 while [ -z ${trad} ]; do
-                        read -p "Quelle est la traduction: " trad
+                        read -p "> " trad
                 done
-                echo -e "\033[32m===================================================================================="
-                echo -e "\t\t\t\tLa bonne traduction:"
                 export mot2=$(echo ${lignerandom} |cut -d "#" -f1 |cut -d "@" -f1)
         	check_response
 	score > result1.txt
@@ -202,17 +188,17 @@ echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
 
 function check_response
 {
-echo "=====>        ${mot2}"
+#echo "=====>        ${mot2}"
 #	trans -t en+fr ${trad}
         if [[ "${mot2}" =~ "${trad}" ]]
-                then echo -e "=\tExact: Votre trad: ${trad} corresponds à: ${mot2} "
-        echo -e "\033[32m===================================================================================="
+                then echo -e "\033[32mGOOD: ${mot2} "
                 succes=$((succes+1))
                 total=$((total+1))
-        else echo -e "\t\033[31mRaté: Ca ne correponds pas entre: ${trad} et: ${mot2}"
-	echo -e "\t\033[31mAjouté à votre liste d'erreur"
+		echo -e "\033[32m===================================================================================="
+        else echo -e "\033[31mFAILED: ${mot2}"
+	echo -e "\033[31mAjouté à votre liste d'erreur"
 	echo "$ligne" >> onlyerr2
-        echo -e "\033[32m===================================================================================="
+        echo -e "\033[31m===================================================================================="
                 total=$((total+1)) ;
         fi
 moyenne=$((succes*20/total))
