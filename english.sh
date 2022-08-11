@@ -196,8 +196,8 @@ function check_response
                 total=$((total+1))
 		echo -e "\033[32m===================================================================================="
         else echo -e "\033[31mFAILED: ${mot2}"
-	echo -e "\033[31mAjouté à votre liste d'erreur"
-	echo "$ligne" >> onlyerr2
+#	echo -e "\033[31mAjouté à votre liste d'erreur"
+#	echo "$ligne" >> onlyerr2
         echo -e "\033[31m===================================================================================="
                 total=$((total+1)) ;
         fi
