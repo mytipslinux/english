@@ -279,6 +279,7 @@ select choix in "Aléatoire Anglais/Francais" "Aléatoire Francais/Anglais" "Rel
 case ${REPLY} in
 
 	1) echo "Aléatoire Anglais/Francais:"
+	j=""
 	j=$((j+1))
 	choix
 	interval
@@ -288,12 +289,15 @@ case ${REPLY} in
 	rappel_menu_random;;
 
 	2) echo "Aléatoire Francais/Anglais:"
+	j=""
+	h=""	
 	j=$((h+2))
 	choix
 	interval
 	RandomQuizzFr
 	blank_var
 	j=""
+	h=""
 	rappel_menu_random;;
 
 	3) echo "Relancer la même plage aléatoire:"

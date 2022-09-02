@@ -1,10 +1,10 @@
 [37m
-Date: 11-08-2022   13h54
-Quizz: 2) Seulement les erreurs du fichier: onlyerr entre la ligne: 130 et la ligne: 140:
+Date: 02-09-2022   19h42
+Quizz: 2) Seulement les erreurs du fichier: onlyerr entre la ligne: 71 et la ligne: 80:
 [32m=====================================================
 ==Bonne Réponse=========Total============Moyenne=====
 =================|=================|=================
-	 3 	  	 11 	  	 5/20 	
+	 9 	  	 10 	  	 18/20 	
 =================|=================|=================
 [37m
  
