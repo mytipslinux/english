@@ -5,7 +5,9 @@ IFS=$'\n\t'
 clear
 # VARIABLE
 # ======================================
-WORKDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#WORKDIR="$( cd -P -- "$(dirname "$(~/git/perso-git/english "$0")" )" && pwd )"
+WORKDIR="$( cd ~/git/perso-git/english && pwd )"
+cd "${WORKDIR}"
 #compteur
 succes=""
 total=""
@@ -121,7 +123,7 @@ until [ $b == 0 ]; do
                 export mot1=$(echo ${lignerandom} |cut -d "#" -f1)
                 echo -e "\033[37m${mot1}"
 		while [ -z ${trad} ]; do	
-                        read -p "> " trad
+                        read -e -p "> " trad
 		done
                 export mot2=$(echo ${lignerandom} |cut -d "#" -f2 |cut -d "@" -f1)
                 check_response
