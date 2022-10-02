@@ -1,10 +1,11 @@
 							[37m
-Date: 28-09-2022   11h31
-							Quizz: 1) Seulement les erreurs du fichier: onlyerr Entre la ligne: 1 et la ligne: 3:
+Date: 03-10-2022   01h03
+							Quizz: 1) Seulement les erreurs du fichier: onlyerr 
+							Entre la ligne: 101 et la ligne: 110 :
 							[32m=====================================================
 							==Bonne Réponse=========Total============Moyenne=====
 							=================|=================|=================
-								 3 	  	 3 	  	 20/20 	
+								 9 	  	 10 	  	 18/20 	
 							=================|=================|=================
 							[37m
  

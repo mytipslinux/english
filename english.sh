@@ -60,53 +60,53 @@ select i in "Seulement les erreurs du fichier" "Tous les mots du fichier"; do
 done
 }
 
-function QuizzEng
-{
-for ligne in ${quizz}; do
-	echo "Passons au mot suivant:"
-        echo -e "\033[33m===================================================================================="
-        echo -e "\t\t\t\tMot à traduire:"
-        export mot1=$(echo ${ligne} |cut -d "#" -f1)
-        echo -e "=====>      ${mot1}"
-        echo "===================================================================================="
+#function QuizzEng
+#{
+#for ligne in ${quizz}; do
+#	echo "Passons au mot suivant:"
+#        echo -e "\033[33m===================================================================================="
+#        echo -e "\t\t\t\tMot à traduire:"
+#        export mot1=$(echo ${ligne} |cut -d "#" -f1)
+#        echo -e "=====>      ${mot1}"
+#        echo "===================================================================================="
+#
+#        echo -e "\033[37m\n "
+#        while [ -z ${trad} ]; do
+#		read -p "Quelle est la traduction: " trad
+#	done
+#        echo -e "\033[32m===================================================================================="
+#        echo -e "\t\t\t\tLa bonne traduction:"
+#        export mot2=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
+#	check_response
+#	trad=""
+#score > result1.txt
+#done
+#affichage_score |tail -n 9
+#}
 
-        echo -e "\033[37m\n "
-        while [ -z ${trad} ]; do
-		read -p "Quelle est la traduction: " trad
-	done
-        echo -e "\033[32m===================================================================================="
-        echo -e "\t\t\t\tLa bonne traduction:"
-        export mot2=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
-	check_response
-	trad=""
-score > result1.txt
-done
-affichage_score |tail -n 9
-}
-
-function QuizzFr
-{
-for ligne in ${quizz}; do
-	echo "Passons au mot suivant:"
-        echo -e "\033[33m================================================================================================================="
-        echo -e "\t\t\t\tMot à traduire:"
-        export mot1=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
-        echo -e "=====>      ${mot1}"
-        echo "================================================================================================================="
-
-        echo -e "\033[37m\n "
-        while [ -z ${trad} ]; do
-        	read -p "Quelle est la traduction: " trad
-        done
-        echo -e "\033[32m================================================================================================================="
-        echo -e "\t\t\t\tLa bonne traduction:"
-        export mot2=$(echo ${ligne} |cut -d "#" -f1 |cut -d "@" -f1)
-        check_response
-	trad=""
-score > result1.txt
-done
-affichage_score |tail -n 9
-}
+#function QuizzFr
+#{
+#for ligne in ${quizz}; do
+#	echo "Passons au mot suivant:"
+#        echo -e "\033[33m================================================================================================================="
+#        echo -e "\t\t\t\tMot à traduire:"
+#        export mot1=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
+#        echo -e "=====>      ${mot1}"
+#        echo "================================================================================================================="
+#
+#        echo -e "\033[37m\n "
+#        while [ -z ${trad} ]; do
+#        	read -p "Quelle est la traduction: " trad
+#        done
+#        echo -e "\033[32m================================================================================================================="
+#        echo -e "\t\t\t\tLa bonne traduction:"
+#        export mot2=$(echo ${ligne} |cut -d "#" -f1 |cut -d "@" -f1)
+#        check_response
+#	trad=""
+#score > result1.txt
+#done
+#affichage_score |tail -n 9
+#}
 
 function RandomQuizzEng
 {
@@ -179,8 +179,8 @@ function param
 export j=$(cat result1.txt |awk  NR==3 |cut -d ")" -f1 |cut -d" " -f2)
 export i=$(cat result1.txt |awk  NR==3 |cut -d ":" -f2 |cut -d")" -f2| cut -c 2-)
 export fichier=$(cat result1.txt |awk  NR==3 |cut -d ":" -f3 | cut -d" " -f2)
-export debut=$(cat result1.txt |awk  NR==4 |cut -d ":" -f2 | cut -d" " -f2)
-export fin=$(cat result1.txt |awk  NR==4 |cut -d ":" -f3 | cut -d" " -f2)
+export debut=$(cat result1.txt |awk  NR==4 |cut -d " " -f4 )
+export fin=$(cat result1.txt |awk  NR==4 |cut -d " " -f8)
 b=$((${fin} - ${debut} +1))
 echo "Lancement du Quizz avec les derniers parametres: 
 Choix: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}"
@@ -194,14 +194,14 @@ function check_response
 #echo "=====>        ${mot2}"
 #	trans -t en+fr ${trad}
         if [[ "${mot2}" =~ "${trad}" ]]
-                then echo -e "\033[32mGOOD: ${mot2} "
+                then echo -e "\t\t\t\t\t\t\t\033[32mGOOD: ${mot2} "
                 succes=$((succes+1))
                 total=$((total+1))
-		echo -e "\033[32m===================================================================================="
-        else echo -e "\033[31mFAILED: ${mot2}"
+		echo -e "\t\t\t\t\t\t\t\033[32m====================================================="
+        else echo -e "\t\t\t\t\t\t\t\033[31mFAILED: ${mot2}"
 #	echo -e "\033[31mAjouté à votre liste d'erreur"
 #	echo "$ligne" >> onlyerr2
-        echo -e "\033[31m===================================================================================="
+        echo -e "\t\t\t\t\t\t\t\033[31m====================================================="
                 total=$((total+1)) ;
         fi
 moyenne=$((succes*20/total))
@@ -211,7 +211,8 @@ function score
 {
 date=$(date "+%d-%m-%Y   %Hh%M")
 echo -e "\t\t\t\t\t\t\t\033[37m\nDate: ${date}
-\t\t\t\t\t\t\tQuizz: ${j}) ${i}: ${fichier} Entre la ligne: ${debut} et la ligne: ${fin}:
+\t\t\t\t\t\t\tQuizz: ${j}) ${i}: ${fichier} 
+\t\t\t\t\t\t\tEntre la ligne: ${debut} et la ligne: ${fin} :
 \t\t\t\t\t\t\t\033[32m=====================================================
 \t\t\t\t\t\t\t==Bonne Réponse=========Total============Moyenne=====
 \t\t\t\t\t\t\t=================|=================|=================
@@ -323,10 +324,3 @@ rappel_menu;;
 6|q|Q) exit;;
 esac
 done
-
-alias bashrc="vim ~/.bashrc"
-alias reloadbashrc=". ~/.bashrc"
-alias bashaliases="vim ~/.bash_aliases"
-alias reloadbashaliases=". ~/.bash_aliases"
-alias eng="~/git/perso-git/english/./english.sh"
-
