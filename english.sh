@@ -323,3 +323,10 @@ rappel_menu;;
 6|q|Q) exit;;
 esac
 done
+
+alias bashrc="vim ~/.bashrc"
+alias reloadbashrc=". ~/.bashrc"
+alias bashaliases="vim ~/.bash_aliases"
+alias reloadbashaliases=". ~/.bash_aliases"
+alias eng="~/git/perso-git/english/./english.sh"
+
