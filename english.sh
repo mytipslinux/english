@@ -88,17 +88,17 @@ function QuizzFr
 {
 for ligne in ${quizz}; do
 	echo "Passons au mot suivant:"
-        echo -e "\033[33m===================================================================================="
+        echo -e "\033[33m================================================================================================================="
         echo -e "\t\t\t\tMot à traduire:"
         export mot1=$(echo ${ligne} |cut -d "#" -f2 |cut -d "@" -f1)
         echo -e "=====>      ${mot1}"
-        echo "===================================================================================="
+        echo "================================================================================================================="
 
         echo -e "\033[37m\n "
         while [ -z ${trad} ]; do
         	read -p "Quelle est la traduction: " trad
         done
-        echo -e "\033[32m===================================================================================="
+        echo -e "\033[32m================================================================================================================="
         echo -e "\t\t\t\tLa bonne traduction:"
         export mot2=$(echo ${ligne} |cut -d "#" -f1 |cut -d "@" -f1)
         check_response
@@ -131,6 +131,7 @@ until [ $b == 0 ]; do
         done
         ((b=b-1))
         trad=""
+affichage_score |tail -n 9
 done
 affichage_score |tail -n 9
 }
@@ -178,8 +179,8 @@ function param
 export j=$(cat result1.txt |awk  NR==3 |cut -d ")" -f1 |cut -d" " -f2)
 export i=$(cat result1.txt |awk  NR==3 |cut -d ":" -f2 |cut -d")" -f2| cut -c 2-)
 export fichier=$(cat result1.txt |awk  NR==3 |cut -d ":" -f3 | cut -d" " -f2)
-export debut=$(cat result1.txt |awk  NR==3 |cut -d ":" -f4 | cut -d" " -f2)
-export fin=$(cat result1.txt |awk  NR==3 |cut -d ":" -f5 | cut -d" " -f2)
+export debut=$(cat result1.txt |awk  NR==4 |cut -d ":" -f2 | cut -d" " -f2)
+export fin=$(cat result1.txt |awk  NR==4 |cut -d ":" -f3 | cut -d" " -f2)
 b=$((${fin} - ${debut} +1))
 echo "Lancement du Quizz avec les derniers parametres: 
 Choix: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}"
@@ -209,14 +210,14 @@ moyenne=$((succes*20/total))
 function score
 {
 date=$(date "+%d-%m-%Y   %Hh%M")
-echo -e "\033[37m\nDate: ${date}
-Quizz: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}:
-\033[32m=====================================================
-==Bonne Réponse=========Total============Moyenne=====
-=================|=================|=================
-\t ${succes} \t  \t ${total} \t  \t ${moyenne}/20 \t
-=================|=================|=================
-\033[37m\n "
+echo -e "\t\t\t\t\t\t\t\033[37m\nDate: ${date}
+\t\t\t\t\t\t\tQuizz: ${j}) ${i}: ${fichier} Entre la ligne: ${debut} et la ligne: ${fin}:
+\t\t\t\t\t\t\t\033[32m=====================================================
+\t\t\t\t\t\t\t==Bonne Réponse=========Total============Moyenne=====
+\t\t\t\t\t\t\t=================|=================|=================
+\t\t\t\t\t\t\t\t ${succes} \t  \t ${total} \t  \t ${moyenne}/20 \t
+\t\t\t\t\t\t\t=================|=================|=================
+\t\t\t\t\t\t\t\033[37m\n "
 }
 
 function affichage_score
