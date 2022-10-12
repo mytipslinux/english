@@ -53,8 +53,8 @@ Choix 9: -Quitter (q|Q)"
 function rappel_menu_random
 {
 echo "Un autre Quizz Random ?
-Choix 1: -Anglais/francais
-Choix 2: -Francais/Anglais
+Choix 1: -${Langue1}/${Langue2}
+Choix 2: -${Langue2}/${Langue1}
 choix 3: -Relancer la même plage aléatoire
 choix 4: -Historique
 choix 5: -Quitter (q|Q)"
