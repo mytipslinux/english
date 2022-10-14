@@ -6,8 +6,8 @@ clear
 # VARIABLE
 # ======================================
 #WORKDIR="$( cd -P -- "$(dirname "$(~/git/perso-git/english "$0")" )" && pwd )"
-WORKDIR="$( cd ~/git/perso-git/english && pwd ) " 
-cd "${WORKDIR}"
+WORKDIR="$(cd /home/srouviere/git/perso-git/english && pwd)" 
+cd ${WORKDIR}
 #compteur
 succes=""
 total=""
@@ -81,35 +81,35 @@ function mainCategorie
 select choix in "5000 mots courants" "Animaux" "Nombres" "Maison" "Argos" "Insultes" "Liaisons" "Métier" "Quitter (q|Q)";do
 case ${REPLY} in
         1) echo "5000 mots courants: "
-                cd 5000
+                cd ./5000
                 mainQuizzRandom
                 rappel_menu_categorie;;
         2) echo "Animaux"
-                cd Animaux
+                cd ./Animaux
                 mainQuizzRandom
                 rappel_menu_categorie;;
         3) echo "Nombre"
-                cd Nombres
+                cd ./Nombres
                 mainQuizzRandom
                 rappel_menu_categorie;;
         4) echo "Maison"
-                cd Maison
+                cd ./Maison
                 mainQuizzRandom
                 rappel_menu_categorie;;
         5) echo "Argos"
-                cd Argos
+                cd ./Argos
                 mainQuizzRandom
                 rappel_menu_categorie;;
         6) echo "Insultes"
-                cd Insultes
+                cd ./Insultes
                 mainQuizzRandom
                 rappel_menu_categorie;;
         7) echo "Liaisons"
-                cd Liaisons
+                cd ./Liaisons
                 mainQuizzRandom
                 rappel_menu_categorie;;
         8) echo "Métier"
-                cd Metier
+                cd ./Metier
                 mainQuizzRandom
                 rappel_menu_categorie;;
         9|q|Q) echo "Quitter"
