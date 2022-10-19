@@ -6,7 +6,7 @@ clear
 # VARIABLE
 # ======================================
 #WORKDIR="$( cd -P -- "$(dirname "$(~/git/perso-git/english "$0")" )" && pwd )"
-WORKDIR="$(cd /home/srouviere/git/perso-git/english && pwd)" 
+WORKDIR="$(cd /home/${USER}/git/perso-git/english && pwd)" 
 cd ${WORKDIR}
 #compteur
 succes=""
@@ -56,8 +56,9 @@ echo "Un autre Quizz Random ?
 Choix 1: -${Langue1}/${Langue2}
 Choix 2: -${Langue2}/${Langue1}
 choix 3: -Relancer la même plage aléatoire
-choix 4: -Historique
-choix 5: -Quitter (q|Q)"
+choix 4: -Plage suivante de ${iteration} mots?
+choix 5: -Historique
+choix 6: -Quitter (q|Q)"
 }
 
 function choix
@@ -81,7 +82,7 @@ function mainCategorie
 select choix in "5000 mots courants" "Animaux" "Nombres" "Maison" "Argos" "Insultes" "Liaisons" "Métier" "Quitter (q|Q)";do
 case ${REPLY} in
         1) echo "5000 mots courants: "
-                cd ./5000
+		cd ./5000
                 mainQuizzRandom
                 rappel_menu_categorie;;
         2) echo "Animaux"
@@ -113,14 +114,14 @@ case ${REPLY} in
                 mainQuizzRandom
                 rappel_menu_categorie;;
         9|q|Q) echo "Quitter"
-                exit
+                break
 esac
 done
 }
 
 function mainQuizzRandom
 {
-select choix in "${Langue1}/${Langue2}" "${Langue2}/${Langue1}" "Relancer la même plage aléatoire" "Historique" "Quitter (q|Q)"; do
+select choix in "${Langue1}/${Langue2}" "${Langue2}/${Langue1}" "Relancer la même plage aléatoire" "Plage suivante?" "Historique" "Quitter (q|Q)"; do
 case ${REPLY} in
 
         1) echo "Aléatoire ${Langue1}/${Langue2}: "
@@ -153,10 +154,18 @@ case ${REPLY} in
         fi
         blank_var
         rappel_menu_random;;
-        4) echo "Historique: "
+        4) echo "Plage suivante"
+	paramITE
+        if [[ "${j}" == 1 ]]
+                then RandomQuizzLangue1
+                else RandomQuizzLangue2;
+        fi
+        blank_var
+        rappel_menu_random;;
+	5) echo "Historique: "
         cat result1.txt
         rappel_menu_random;;
-        5|q|Q) exit;;
+        6|q|Q) break;;
 esac
 done
 }
@@ -243,6 +252,26 @@ export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
 echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
 }
 
+function paramITE
+{
+export j=$(cat result1.txt |awk  NR==3 |cut -d ")" -f1 |cut -d" " -f2)
+export i=$(cat result1.txt |awk  NR==3 |cut -d ":" -f2 |cut -d")" -f2| cut -c 2-)
+export fichier=$(cat result1.txt |awk  NR==3 |cut -d ":" -f3 | cut -d" " -f2)
+export debut=$(cat result1.txt |awk  NR==4 |cut -d " " -f4 )
+export fin=$(cat result1.txt |awk  NR==4 |cut -d " " -f8)
+iteration=$((${fin}-${debut} +1))
+debut=$((${debut}+${iteration}))
+fin=$((${fin}+${iteration}))
+b=$((${fin} - ${debut} +1))
+echo "Lancement du Quizz avec les derniers parametres:
+Choix: ${j}) ${i}: ${fichier} entre la ligne: ${debut} et la ligne: ${fin}"
+
+export quizz=$(cat ${fichier} |awk "NR>=${debut} && NR<=${fin}")
+echo -e "\033[37m\n Score Reset à: 0 \n Lets GO"
+}
+
+
+
 function check_response
 {
 #echo "=====>        ${mot2}"
@@ -308,8 +337,9 @@ echo -e "c=====================
       | //::|  |::\ \|
       |//:::|__|:::\_|\n\n"
 
-Langue1="English"
-cd ${Langue1}
+WORKDIR="$(cd /home/${USER}/git/perso-git/english && pwd)"
+Langue1="$(echo English)"
+cd ${WORKDIR}/${Langue1}
 mainCategorie
 rappel_menu_principal;;
 
@@ -358,8 +388,9 @@ echo -e "
 |                                    Torre
 |_____________________________________________________________________________"
 
-Langue1="Italian"
-cd ${Langue1}
+WORKDIR="$(cd /home/${USER}/git/perso-git/english && pwd)"
+Langue1="$(echo Italian)"
+cd ${WORKDIR}/${Langue1}
 mainCategorie
 rappel_menu_principal;;
 
@@ -389,8 +420,9 @@ rappel_menu_principal;;
 # \ )\    *_)/`-.__|| \\ |                                   J     ` L
 #--'--'\"""""\`------''--'\`'""""""""""""""""""""""""""""""""""""""""""""""
 #"
-Langue1="Spanish"
-cd ${Langue1}
+WORKDIR="$(cd /home/${USER}/git/perso-git/english && pwd)"
+Langue1="$(echo Spanish)"
+cd ${WORKDIR}/${Langue1}
 mainCategorie
 rappel_menu_principal;;
 
@@ -419,9 +451,9 @@ _|______|__|____|_|_|__=______|_==__-|_______|__||_____|___|_____|
 _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/^PB_/_/_/_/
 
 "
-
-Langue1="Dutch"
-cd ${Langue1}
+WORKDIR="$(cd /home/${USER}/git/perso-git/english && pwd)"
+Langue1="$(echo Dutch)"
+cd ${WORKDIR}/${Langue1}
 mainCategorie
 rappel_menu_principal;;
 

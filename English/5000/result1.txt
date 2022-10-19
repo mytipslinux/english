@@ -1,11 +1,11 @@
 							[37m
-Date: 11-10-2022   11h28
-							Quizz: 1) Seulement les erreurs du fichier: onlyerr 
-							Entre la ligne: 1 et la ligne: 3 :
+Date: 17-10-2022   14h03
+							Quizz: 1) Tous les mots du fichier: allwords 
+							Entre la ligne: 1 et la ligne: 4 :
 							[32m=====================================================
 							==Bonne Réponse=========Total============Moyenne=====
 							=================|=================|=================
-								 1 	  	 1 	  	 20/20 	
+								  	  	 1 	  	 0/20 	
 							=================|=================|=================
 							[37m
  

@@ -346,7 +346,7 @@ both#tous les deux@
 date, dates#date, dates@
 spend, spending, spends, spent#dépenser, dépenser, dépenser, dépenser@
 office, offices#bureau, bureaux@
-hit, hits, hitting#frapper, frapper, frapper@
+to hit, hit, hits, hitting#frapper, frapper, frapper@
 yet#encore@
 save, saved, saves, saving#enregistrer, enregistrer, enregistrer, enregistrer@
 true, truer, truest#vrai, plus vrai, plus vrai@
@@ -759,7 +759,6 @@ egg, eggs#oeuf, oeufs@
 saturday, saturdays#samedi, samedi@
 blue, bluer, bluest#bleu, plus bleu, plus bleu@
 horrible#horrible@
-shit, shits#merde, merde@
 favor, favors#faveur, faveurs@
 handle, handles, handling, handled#poignée, poignées, manipulation, manipulé@
 wall, walls#mur, murs@
@@ -1540,7 +1539,6 @@ spread, spreads, spreading#se propager, se propager, se répandre@
 adorable#adorable@
 ocean, oceans#océan, océans@
 percent, percents#pourcentage, pourcentages@
-shit#merde@
 wing, wings#aile, ailes@
 above#dessus@
 alcohol, alcohols#alcool, alcools@
@@ -1709,7 +1707,7 @@ eighteen, eighteens#dix-huit, dix-huit@
 express, expressed, expresses, expressing#exprimer, exprimer, exprimer, exprimer@
 plastic, plastics#plastique, plastique@
 responsibility, responsibilities#responsabilité, responsabilités@
-starve, starved, starves, starving#affamé, affamé, affamé, affamé@
+to starve, starve, starved, starves, starving#affamer, affamé, affamé, affamé, affamé@
 united#uni@
 worker, workers#ouvrier, ouvriers@
 aids#sida@
@@ -1762,9 +1760,8 @@ view, views#vue, vues@
 basement, basements#sous-sol, sous-sols@
 degree, degrees#degré, degrés@
 fortune, fortunes#fortune, fortunes@
-hit, hits#frapper, coups@
 invitation, invitations#invitation, invitations@
-nail, nailed, nailing, nails#clou, cloué, clou, ongles@
+to nail, nail, nailed, nailing, #clou, cloué, clou@
 oops#oops@
 professional#professionnel@
 search, searches#recherche, recherches@
@@ -1792,7 +1789,6 @@ puppy, puppies#chiot, chiots@
 rain, rains#pluie, pluies@
 spin, spinning, spins, spun#tourner, tourner, tourner, tourner@
 throat, throats#gorge, gorge@
-e-mail, e-mails, e-mailing, e-mailed, email, emails, emailing, emailed#e-mail, e-mails, e-mailing, e-mailed, e-mail, e-mails, e-mailing, e-mail@
 present, presented, presenting, presents#présent, présenté, présenter, présente@
 reality, realities#réalité, réalités@
 saint, saints#saint, saints@
@@ -1830,7 +1826,7 @@ asleep#endormi@
 fashion, fashions#mode, modes@
 glove, gloves#gant, gants@
 item, items#article, articles@
-recommend, recommended, recommending, recommends#recommander, recommandé, recommander, recommander@
+to recommend, recommended, recommending, recommends#recommander, recommandé, recommander, recommander@
 tuna, tunas#thon, thons@
 warehouse, warehouses#entrepot, entrepots@
 italian, italians#italien, italiens@
@@ -1839,7 +1835,7 @@ tank, tanks#réservoir, réservoirs@
 whale, whales#baleine, baleines@
 zone, zones#zone, zones@
 honor, honored, honoring, honors#honneur, honoré, honorant, honneurs@
-panic, panicked, panicking, panics#panique, paniqué, paniqué, panique@
+to panic, panic, panicked, panicking, panics#paniquer, panique, paniqué, paniqué, panique@
 bachelor, bachelors#célibataire, célibataire@
 chain, chains#chaîne, chaînes@
 creature, creatures#créature, créatures@
@@ -3721,7 +3717,7 @@ sloppy, sloppier, sloppiest#bâclée, bâclée, bâclée@
 somewhat#quelque peu@
 spray, sprays#spray, sprays@
 suitcase, suitcases#valise, valises@
-take, takes#prendre, prend@
+to take, takes#prendre, prend@
 tense, tenser, tensest#tendu, tendu, tendu@
 valley, valleys#vallée, vallées@
 web, webs#web, toiles@
