@@ -149,7 +149,7 @@ set, sets#ensemble, ensembles@
 turd, turds#crotte, crottes@
 view, views#vue, vues@
 basement, basements#sous-sol, sous-sols@
-nail, nailed, nailing, nails#clou, cloué, clou@
+to nail, nail, nailed, nailing, nails#clou, cloué, clouer@
 chef, chefs#chef, chefs@
 waitress, waitresses, busboy, busboys, waiter#serveuse, serveuses, serveur, serveurs@
 booze, boozes#alcool, alcools@
@@ -181,26 +181,26 @@ poop, poops#merde, merdes@
 dammit#bon sang@
 lead, leads#plomb, conduit@
 crap, crapped, crapping, craps#merde, merde, merde@
-pour, poured, pouring, pours#versé, verser, verser, verser@
+to pour, pour, poured, pouring, pours#versé, verser, verser, verser@
 odd#impair, étrange, bizarre, curieux, singulier, surprenant, fantasque, dépareillé, qui reste@
-provide, provided, provides, providing#fournir, fournir, fournir, fournir@
-swallow, swallowed, swallowing, swallows#avaler, avaler, avaler, avaler@
+to provide, provided, provides, providing#fournir, fournir, fournir, fournir@
+to swallow, swallowed, swallowing, swallows#avaler, avaler, avaler, avaler@
 gut, guts#instinct, tripes@
 fridge, fridges#réfrigérateur, réfrigérateurs, frigo@
 pad, pads#tampons@
 script, scripts#script, scripts@
-whip, whipped, whipping, whips, whup, whupped, whupping, whups, whoop, whoops, whooping, whooped#fouet, fouetté, fouetté, fouet, fouetté, fouetté, fouetté, fouetté@
+to whip, whip, whipped, whipping, whips, whup, whupped, whupping, whups, whoop, whoops, whooping, whooped#fouet, fouetter, fouetté, fouetté@
 beyond#au-delà@
-grant, granted, granting, grants#subvention, accordé, accorder, octroi, subventions@
+to grant, grant, granted, granting, grants#subvention, accordé, accorder, octroi, subventions@
 junk, junks#jonque, jonques, camelote, déchet, feraille, la came@
 prom, proms#bal, bals@
 schedule, schedules#horaire, horaires@
-claim, claimed, claiming, claims#réclamation, réclamé, réclamer,réclamation, réclamations@
+to claim, claim, claimed, claiming, claims#réclamation, réclamé, réclamer, réclamation, réclamations@
 grave, graves#tombe, tombes@
-require, required, requires, requiring#exiger, requis, exiger, exiger@
+to require, require, required, requires, requiring#exiger, requis, requérir, exiger@
 moron, morons#crétin, crétins@
 oven, ovens#four, fours@
-spill, spilled, spilling, spills, spilt#déversement, déverser, déversé, déversement, déversement, déversé@
+to spill, spill, spilled, spilling, spills, spilt#déversement, déverser, déversé, déversement, déversement, déversé@
 stain, stains#tache, taches@
 delivery, deliveries#livraison, livraisons@
 eve, eves#veille, veilles@
@@ -209,17 +209,16 @@ drawer, drawers#tiroir, tiroirs@
 further#plus loin@
 selfish#égoïste@
 anger, angers#colère, colères@
-crawl, crawled, crawling, crawls#ramper, ramper, ramper, ramper@
+to crawl, crawl, crawled, crawling, crawls#ramper, ramper, ramper, ramper@
 beloved#bien-aimé@
-threaten, threatened, threatening, threatens#menacer, menacer, menacer, menacer@
+to treat, threaten, threatened, threatening, threatens#menacer, menacer, menacer, menacer@
 heck#zut@
 offense, offenses#délit, délits@
 crappy, crappier, crappiest#merdique, plus merdique, plus merdique@
-asleep#endormi@
-bend, bending, bends, bent#plier, plier, plier, plier@
+to bend, bend, bending, bends, bent#plier, plier, plier, plier@
 commitment, commitments#engagement, engagements@
 joy, joys#joie, joies@
-shove, shoved, shoves, shoving#pousser, pousser, pousser, pousser@
+to shove, shove, shoved, shoves, shoving#pousser, pousser, pousser, pousser@
 damn, damns, goddamn, goddamned#putain@
 fellow#membre@
 jar, jars#pot, bocaux@
@@ -249,8 +248,7 @@ committee, committees#comité, comités@
 loss, losses#perte, pertes@
 including#comprenant@
 childhood, childhoods#enfance, enfances@
-cut, cuts#coupe, coupe@
-warm, warmed, warming, warms#chaud, réchauffé, réchauffant, réchauffe@
+to warn,warm, warmed, warming, warms#chauffer, réchauffer, chaud, réchauffé, réchauffant, réchauffe@
 below#au dessous de@
 concern, concerns#inquiétude, inquiétudes@
 exhaust, exhausted, exhausting, exhausts#échappement, épuisé, épuisant, échappements@
