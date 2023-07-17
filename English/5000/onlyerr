@@ -80,7 +80,7 @@ purpose, purposes#but, buts@
 report, reports, reporting, reported#rapport, rapports, rapports, rapportés@
 to cheer, cheer, cheers, cheering, cheered#applaudir, acclamer, acclamation, acclamations, encouragement@
 gorgeous#magnifique@
-to sue, sue, sues, suing, sued#poursuivre en justice, poursuivre@
+to sue, sue, sues, suing, sued, pursue, pursued, pursues, pursuing#poursuivre en justice, poursuivre@
 whether#qu'il s'agisse, si, que, soit@
 bang, bangs, banging, banged#coup, frange, frapper, frappé@
 onto#sur@
@@ -101,7 +101,7 @@ over#plus de@
 to rest, rests, resting, rested#se reposer, se reposer, se reposer, se reposer@
 above#dessus@
 row, rows#ligne, lignes@
-sight, sights#vue, sites@
+sight, sights, view#vue, sites@
 trash, trashes#poubelle, poubelles@
 earn, earns, earning, earned#gagner, gagné@
 within#dans@
@@ -147,10 +147,8 @@ nipple, nipples#mamelon, mamelons@
 rough, rougher, roughest#rugueux, plus rugueux, plus rugueux@
 set, sets#ensemble, ensembles@
 turd, turds#crotte, crottes@
-view, views#vue, vues@
 basement, basements#sous-sol, sous-sols@
 to nail, nail, nailed, nailing, nails#clou, cloué, clouer@
-chef, chefs#chef, chefs@
 waitress, waitresses, busboy, busboys, waiter#serveuse, serveuses, serveur, serveurs@
 booze, boozes#alcool, alcools@
 ton, tons#tonne, tonnes@
@@ -158,7 +156,6 @@ to attract, attract, attracted, attracting, attracts#attirer, attiré, attirer, 
 aware, awarer, awarest#conscient, plus conscient, plus conscient@
 far, farther, further, farthest, furthest#loin, plus loin, plus loin, plus loin, plus loin@
 focus, focused, focuses, focusing, focussed, focusses, focussing#focaliser, focalisé, focalisé, focalisé, focalisé, focalisé, focalisé@
-pencil, pencils#crayon, crayons@
 sentence, sentences#phrase, phrases@
 squeeze, squeezed, squeezes, squeezing#serrer, serrer, serrer, serrer@
 asleep#endormi@
@@ -186,9 +183,7 @@ odd#impair, étrange, bizarre, curieux, singulier, surprenant, fantasque, dépar
 to provide, provided, provides, providing#fournir, fournir, fournir, fournir@
 to swallow, swallowed, swallowing, swallows#avaler, avaler, avaler, avaler@
 gut, guts#instinct, tripes@
-fridge, fridges#réfrigérateur, réfrigérateurs, frigo@
 pad, pads#tampons@
-script, scripts#script, scripts@
 to whip, whip, whipped, whipping, whips, whup, whupped, whupping, whups, whoop, whoops, whooping, whooped#fouet, fouetter, fouetté, fouetté@
 beyond#au-delà@
 to grant, grant, granted, granting, grants#subvention, accordé, accorder, octroi, subventions@
@@ -234,79 +229,67 @@ county, counties#comté, comtés@
 gain, gained, gaining, gains#gagner, gagner, gagner, gagner@
 among, amongst#parmi, parmi@
 deny, denied, denies, denying#nier, nier, nier, nier@
-fudge, fudges#fudge, fudges@
-hooray#hourra@
+fudge, fudges#truquer, esquiver, tergiverser, faire tromper, faire publier, marcher lentement, le caramel, la blague@
 statement, statements#déclaration, déclarations@
 thrill, thrilled, thrilling, thrills#frisson, excité, passionnant, frissons@
-wiener, wieners#saucisses, saucisses@
-bond, bonded, bonding, bonds#bond, collé, collage, obligations@
+wiener, wieners#saucisse de strasbourg, saucisses de strasbourg@
+to bond, bonded, bonding, bonds#coller, bond, collé, collage, obligations@
 filthy, filthier, filthiest#sale, plus sale, plus sale@
-furniture#un meuble@
+furniture#un meuble, l'ameublement@
 mock, mocked, mocking, mocks#se moquer, se moquer, se moquer, se moquer@
 sack, sacks#sac, sacs@
 committee, committees#comité, comités@
-loss, losses#perte, pertes@
 including#comprenant@
 childhood, childhoods#enfance, enfances@
-to warn,warm, warmed, warming, warms#chauffer, réchauffer, chaud, réchauffé, réchauffant, réchauffe@
+to warm,warm, warmed, warming, warms#chauffer, réchauffer, chaud, réchauffé, réchauffant, réchauffe@
 below#au dessous de@
-concern, concerns#inquiétude, inquiétudes@
 exhaust, exhausted, exhausting, exhausts#échappement, épuisé, épuisant, échappements@
 roll, rolls#rouleau, rouleaux@
 belief, beliefs#croyance, croyances@
-bump, bumped, bumping, bumps#bosse, heurté, cogner, bosses@
+to bump, bumped, bumping, bumps#bosse, heurté, cogner, bosses@
 neat, neater, neatest#soigné, plus net, le plus soigné@
-odds#chances@
-toss, tossed, tosses, tossing#lancer, lancer, lancer, lancer@
+to toss, tossed, tosses, tossing#lancer, lancer, lancer, lancer@
 wide, wider, widest#large, plus large, plus large@
-boo#huer@
 bullshit, bullshits#conneries, conneries@
 dial, dialed, dialing, dials#cadran, composé, numérotation, cadrans@
-pile, piles#pile, tas@
 belly, bellies#ventre, ventres@
 booth, booths#stand, cabines@
 gentle, gentler, gentlest#doux, plus doux, plus doux@
-poster, posters#affiche, affiches@
 sweep, sweeping, sweeps, swept#balayer, balayer, balayer, balayer@
 pride, prides#fierté, fierté@
 psych, psyched, psyching, psychs#psychique, psychédélique, psychique, psychique@
-wrestle, wrestled, wrestles, wrestling#lutte, lutte, luttes, lutte@
+to wrestle, wrestled, wrestles, wrestling, struggle, struggled, struggles, struggling, wrestler, wrestlers#lutter, lutte, lutte, luttes, lutte, lutteur, lutteurs@
 painful, painfuller, painfullest#douloureux, plus douloureux, plus douloureux@
 process, processes#processus, processus@
-smash, smashed, smashes, smashing#fracasser, écraser, fracasser, fracasser@
+to smash, smashed, smashes, smashing#fracasser, écraser, fracasser, fracasser@
 helpful#utile@
-picture, pictured, pictures, picturing#image, sur la photo, photos, sur la photo@
-sail, sailed, sailing, sails#voile, navigué, voile, voiles@
-sleep, sleeps#dormir, dormir@
-attend, attended, attending, attends#assister, assister, assister, assister@
+to sail, sailed, sailing, sails#naviguer, voile, navigué, voile, voiles@
+to attend, attended, attending, attends#assister, assister, assister, assister@
 to doom, doom, doomed, dooming, dooms#condamner, condamné, condamné, condamné@
-flush, flushed, flushes, flushing#rincer, rincer, rincer, rincer@
-poop, pooped, pooping, poops#caca, caca, caca, caca@
+to flush, flushed, flushes, flushing#rincer, rincer, rincer, rincer@
 ankle, ankles#cheville, chevilles@
 bail, bailed, bailing, bails#caution, mise en liberté sous caution, renflouement, bails@
 entertainment, entertainments#divertissement, divertissements@
-kind, kinder, kindest#gentil, gentil, gentil@
-match, matched, matches, matching#correspondance, correspondance, correspondance, correspondance@
+kind, kinder, kindest, kindly#gentil, gentil, gentil, gentilement@
+to match, matched, matches, matching#correspondre, correspondance, correspondance, correspondance, correspondance@
 stamp, stamps#timbre, timbres@
 pickle, pickles#cornichons, cornichons@
-recipe, recipes#recette, recettes@
 toward, towards#vers, vers@
 wherever#partout où@
 backwards#en arrière@
-seek, seeking, seeks, sought#cherche, cherche, cherche, cherche@
-tit, tits#sein, branlette espagnole, seins@
+to seek, seeking, seeks, sought#chercher, cherche, cherche, cherche@
 decent#décent@
 lawn, lawns#pelouse, pelouses@
 pretzel, pretzels#bretzel, bretzels@
-whack, whacked, whacking, whacks#claquer, claquer, claquer, claquer@
+to whack, whacked, whacking, whacks#claquer, claquer, claquer, claquer@
 bloody, bloodier, bloodiest#sanglant, plus sanglant, plus sanglant@
 brand, brands#marque, marques@
 doggie, doggy, doggies#chienchien, chienchien, toutous@
-entertain, entertained, entertaining, entertains#divertir, divertir, divertir, divertir@
+to entertain, entertained, entertaining, entertains#divertir, divertir, divertir, divertir@
 motion, motions#mouvement, mouvements@
-poke, poked, pokes, poking#piquer, piquer, piquer, piquer@
-spoil, spoiled, spoiling, spoils, spoilt#gâter, gâté, gâter, gâter, gâté@
-compete, competed, competes, competing#concurrencer, concurrencer, concurrencer, concurrencer@
+to poke, poked, pokes, poking#piquer, piquer, piquer, piquer@
+to spoil, spoiled, spoiling, spoils, spoilt#gâter, gâté, gâter, gâter, gâté@
+to compete, competed, competes, competing#concurrencer, concurrencer, concurrencer, concurrencer@
 sharp, sharper, sharpest#net, plus net, plus net@
 wig, wigs#perruque, perruques@
 aisle, aisles#bas-coté, bas-cotés@
@@ -316,21 +299,18 @@ pitch, pitched, pitches, pitching#pitch, pitched, pitching, pitching@
 swing, swings#balançoire, balançoires@
 whom#qui@
 fork, forks#fourche, fourches@
-occur, occurred, occurring, occurs#se produire, se produire, se produire, se produire@
-bam#bam@
-behave, behaved, behaves, behaving#se comporter, se comporter, se comporter, se comporter@
+to occur, occurred, occurring, occurs#se produire, se produire, se produire, se produire@
+to behave, behaved, behaves, behaving#se comporter, se comporter, se comporter, se comporter@
 estate, estates#domaine, domaines@
 fellow, fellows#camarade, boursiers@
 hose, hoses#tuyau, tuyaux@
 classy, classier, classiest#chic, plus classe, plus classe@
-drown, drowned, drowning, drowns#se noyer, se noyer, se noyer, se noie@
-duh#duh@
+to drown, drowned, drowning, drowns#se noyer, se noyer, se noyer, se noie@
 tale, tales#conte, contes@
-threat, threats#menace, menaces@
 cruise, cruises#croisière, croisières@
 forth#en avant@
 nonsense#absurdité@
-offend, offended, offending, offends#offensé, offensé, offensant, offensant@
+to offend, offended, offending, offends#offensé, offensé, offensant, offensant@
 self, selves#soi-même@
 shitty, shittier, shittiest#merdique, merdique, plus merdique@
 cheers#à votre santé@
@@ -343,18 +323,16 @@ hallway, hallways#couloir, couloirs@
 pin, pins#broche, broches@
 purchase, purchased, purchases, purchasing#acheter, acheté, achats, achat@
 shout, shouted, shouting, shouts#crié, crier, crier, crier@
-thee#te@
 complaint, complaints#plainte, plaintes@
-condo, condoes, condos#condo, condos, condos@
+condo, condoes, condos#copropriété, condos@
 donate, donated, donates, donating#faire un don, faire un don, faire un don, faire un don@
 fur, furs#fourrure, fourrures@
 good-looking#beau@
 gravy, gravies#sauce, sauces@
-sweat, sweated, sweating, sweats#sueur, transpiration, transpiration, sueurs@
+sweat, sweated, sweating, sweats, sweaty, sweatier, sweatiest#sueur, transpiration, transpiration, sueurs, en sueur@
 counselor, counselors#conseiller, conseillers@
 horn, horns#corne, cornes@
 staff, staffs, staves#personnel, personnel, portées@
-patch, patches#patch, patchs@
 abortion, abortions#avortement, avortements@
 bark, barked, barking, barks#aboiements, aboiements, aboiements, aboiements@
 bartender, bartenders#barman, barmans@
@@ -362,36 +340,36 @@ casual#décontractée@
 chop, chops#hacher, cotelettes@
 intend, intended, intending, intends#l'intention, l'intention, l'intention, l'intention@
 underneath#sous@
-argue, argued, argues, arguing#argumenter, argumenter, argumenter, argumenter@
+to argue, argued, argues, arguing#argumenter, argumenter, argumenter, argumenter@
 attempt, attempted, attempting, attempts#tentative, tentative, tentative, tentatives@
 bush, bushes#buisson, buissons@
 footage#métrage@
 height, heights#hauteur, hauteurs@
 labor, labors#travail, travaux@
-pass, passes#passer, passe@
+to pass, passes#passer, passe@
 delightful#délicieux@
 pole, poles#poteau, poteaux@
 cheek, cheeks#joue, joues@
 expense, expenses#dépenses, dépenses@
 pea, peas#pois, pois@
 rack, racks#rack, racks@
-wander, wandered, wandering, wanders#errer, errer, errer, errer@
+to wander, wandered, wandering, wanders#errer, errer, errer, errer@
 bump, bumps#bosse, bosses@
-chili, chilis, chile, chiles, chilies, chilli, chillies#piment, piments, piments, piments, piments, piments, piments@
+chili, chile, chiles, chilies, chilli, chillies#piment, piments, piments, piments, piments, piments, piments@
 former#ancien@
 gesture, gestures#geste, gestes@
 shelter, shelters#abri, abris@
 awfully#terriblement@
 sudden#soudain@
-tuck, tucked, tucking, tucks#rentrer, rentrer, rentrer, rentrer@
+to tuck, tucked, tucking, tucks#rentrer, rentrer, rentrer, rentrer@
 sin, sins#péché, péchés@
 chart, charts#graphique, graphiques@
 grader, graders#niveleuse, niveleuses@
 carefully#soigneusement@
-dork, dorks#dork, dorks@
-ski, skied, skiing, skis#ski, skié, ski, skis@
+dork, dorks#idiot, idiots, pauvre type@
+to ski, skied, skiing, skis#ski, skié, ski, skis@
 upper#plus haut@
-bounce, bounced, bounces, bouncing#rebondir, rebondir, rebondir, rebondir@
+to bounce, bounced, bounces, bouncing#rebondir, rebondir, rebondir, rebondir@
 dice, dices#dés, dés@
 entirely#entièrement@
 flatter, flatters, flattered, flattering#plus plat, flatte, flatté, flatteur@
@@ -566,14 +544,13 @@ fund, funds#fonds, fonds@
 hog, hogged, hogging, hogs#porc, acculé, accaparement, porcs@
 hurricane, hurricanes#ouragan, ouragans@
 proper, properer, properest#convenable, convenable, convenable@
-sweaty, sweatier, sweatiest#en sueur, en sueur, en sueur@
 thigh, thighs#cuisse, cuisses@
 vest, vests#gilet, gilets@
 crib, cribs#berceau, berceaux@
 average, averages#moyenne, moyennes@
 balance, balances#solde, soldes@
 hobo, hoboes, hobos#clochard, hoboes, hobos@
-queer, queerer, queerest#queer, queerer, queerest@
+queer, queerer, queerest#déviant, bizarre, non conventionnel@
 tray, trays#plateau, plateaux@
 yuck#beurk@
 beneath#sous@
@@ -582,7 +559,6 @@ bladder, bladders#vessie, vessie@
 cult, cults#culte, cultes@
 flesh, fleshes#chair, chair@
 fulfill, fulfilled, fulfilling, fulfills#accomplir, épanoui, épanouissant, accomplit@
-heck#zut@
 hint, hints#indice, indices@
 hump, humped, humping, humps#bosse, bosse, bosse, bosses@
 merely#seulement@
@@ -592,7 +568,6 @@ smug, smugger, smuggest#suffisant, suffisant, suffisant@
 spray, sprayed, spraying, sprays#pulvérisation, pulvérisation, pulvérisation, pulvérisations@
 straw, straws#paille, pailles@
 tend, tended, tending, tends#tend, tendu, tendu, tend@
-wrestler, wrestlers#lutteur, lutteurs@
 bud, buds#bourgeon, bourgeons@
 riot, riots#émeute, émeutes@
 blast, blasted, blasting, blasts#souffle, dynamité, dynamitage, explosions@
@@ -621,16 +596,15 @@ worthless#sans valeur@
 righty#juste@
 breeze, breezes#brise, brises@
 burst, bursted, bursting, bursts#éclaté, éclaté, éclaté, éclats@
-cocoa, cocoas#cacao, cacao@
 courtesy, courtesies#courtoisie, courtoisies@
 dough#pâte@
 foolish#insensé@
-moo, mooed, mooing, moos#moo, mooed, mooing, moos@
+moo, mooed, mooing, moos#meuglement@
 sleeve, sleeves#manches, manches@
 strangle, strangled, strangles, strangling#étrangler, étrangler, étrangler, étrangler@
 tickle, tickled, tickles, tickling#chatouiller, chatouiller, chatouiller, chatouiller@
 wonder, wonders#merveille, merveilles@
-wuss, wusses#wuss, wusses@
+wuss, wusses#faiblesse, mauviette, personne inéfficace@
 cue, cues#signal, réplique@
 blessing, blessings#bénédiction, bénédictions@
 grown-up, grown-ups#adultes, adultes@
@@ -740,7 +714,6 @@ peel, peeled, peeling, peels#peler, pelé, peler, peler@
 rash, rashes#éruption cutanée, éruptions cutanées@
 so-called#soi-disant@
 stool, stools#tabouret, tabourets@
-struggle, struggled, struggles, struggling#lutte, lutté, lutte, lutte@
 subtle, subtler, subtlest#subtile, subtile, subtile@
 water, watered, watering, waters#eau, arrosé, arrosage, eaux@
 wealthy, wealthier, wealthiest#riches, plus riches, plus riches@
@@ -782,12 +755,10 @@ witness, witnessed, witnesses, witnessing#témoin, témoin, témoins, témoin@
 yikes#oui@
 hood, hoods#hotte, hottes@
 dawn, dawns#l'aube, l'aube@
-tent, tents#tente, tentes@
 bathtub, bathtubs#baignoire, baignoires@
 broad, broader, broadest#large, plus large, plus large@
 cranky, crankier, crankiest#grincheux, plus grincheux, plus grincheux@
 foam, foams#mousse, mousses@
-hiya#hiya@
 kisser, kissers#embrasser, baisers@
 loosen, loosened, loosening, loosens#desserrer, desserrer, desserrer, desserrer@
 scarf, scarfs, scarves#écharpe, écharpes, foulards@
@@ -798,31 +769,24 @@ braces#croisillons@
 cashmere, cashmeres#cachemire, cachemires@
 chimp, chimps#chimpanzé, chimpanzés@
 cutie, cutey, cuteys, cuties#mignonne, mignonne, mignonnes, mignonnes@
-decaf, decaff, decaffs, decafs#décaféiné, décaféiné, décaféiné, décaféiné@
 dunk, dunked, dunking, dunks#tremper, tremper, tremper, dunks@
 grind, grinding, grinds, ground#broyer, broyer, broyer, broyer@
 hairy, hairier, hairiest#poilu, plus poilu, plus poilu@
 handy, handier, handiest#pratique, plus pratique, plus pratique@
 humble, humbler, humblest#humble, plus humble, plus humble@
-juggle, juggled, juggles, juggling#jongler, jongler, jongler, jongler@
-lift, lifts#ascenseur, ascenseurs@
 molest, molested, molesting, molests#molester, molesté, molester, molester@
 overwhelm, overwhelmed, overwhelming, overwhelms#accablé, accablé, accablant, accablant@
 properly#correctement@
 restroom, restrooms#toilettes, toilettes@
 settlement, settlements#règlement, colonies@
 toad, toads#crapaud, crapauds@
-trust, trusts#confiance, confiance@
 bath, bathed, bathing, baths#bain, baigné, baignade, bains@
 beaver, beavers#castor, castors@
 blazer, blazers#blazer, blazers@
 drawing, drawings#dessin, dessins@
-dumpster, dumpsters#benne à ordures, bennes à ordures@
-feature, featured, features, featuring#fonctionnalité, en vedette, caractéristiques, mettant en vedette@
 janitor, janitors#concierge, concierges@
 process, processed, processes, processing#processus, traité, processus, traitement@
 puffy, puffier, puffiest#bouffi, plus bouffi, plus bouffi@
-robe, robes#robe, robes@
 sew, sewed, sewing, sewn, sews#coudre, cousu, coudre, cousu, coud@
 shatter, shattered, shattering, shatters#brisé, brisé, brisé, brisé@
 sickness#maladie@
@@ -832,7 +796,6 @@ stir, stirred, stirring, stirs#remuer, remuer, remuer, remuer@
 pimp, pimps#proxénète, proxénètes@
 beat, beats#battre, battre@
 buzz, buzzes#bourdonnement, bourdonnement@
-chemistry, chemistries#chimie, chimies@
 doorman, doormen#portier, portiers@
 fatty, fatties#gras, gras@
 funky, funkier, funkiest#génial, plus funk, plus funki@
@@ -874,12 +837,10 @@ fatso, fatsos#fatso, fatsos@
 headquarters#quartier général@
 ink, inks#encre, encres@
 jinx, jinxed, jinxes, jinxing#jinx, jinxed, jinxes, jinxing@
-kindly#gentiment@
 lump, lumps#bosse, grumeaux@
-mail, mailed, mailing, mails#courrier, posté, mailing, mails@
 piggy, piggies#piggy, piggies@
 priceless#inestimable@
-ramp, ramps#rampe, rampes@
+ramp, ramps, creeps#rampe, rampes, rampes@
 rusty, rustier, rustiest#rouillé, plus rouillé, plus rouillé@
 seize, seized, seizes, seizing#saisir, saisir, saisir, saisir@
 shrink, shrank, shrinking, shrinks, shrunk, shrunken#rétrécir, rétrécir, rétrécir, rétrécir, rétréci, rétréci@
@@ -902,7 +863,6 @@ abort, aborted, aborting, aborts#abandonner, abandonner, abandonner, abandonner@
 biggy, biggie, biggies#biggy, biggie, biggies@
 brat, brats#morveux, marmots@
 cleanse, cleansed, cleanses, cleansing#nettoyer, nettoyer, nettoyer, nettoyer@
-creeps#rampe@
 dull, duller, dullest#terne, plus terne, plus terne@
 fuzzy, fuzzier, fuzziest#floue, plus floue, plus floue@
 insensitive#insensible@
@@ -910,8 +870,6 @@ investor, investors#investisseur, investisseurs@
 knit, knits, knitted, knitting#tricot, tricot, tricoté, tricot@
 oatmeal#gruau@
 overcome, overcame, overcomes, overcoming#surmonter, surmonter, surmonter, surmonter@
-plaque, plaques#plaque, plaques@
-pursue, pursued, pursues, pursuing#poursuivre, poursuivi, poursuit, poursuivre@
 rep, reps#représentant, représentants@
 seat, seated, seating, seats#siège, assis, sièges, sièges@
 shack, shacks#cabane, cabanes@
